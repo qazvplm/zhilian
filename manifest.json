@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "智联 投递助手",
+  "version": "1.0.1",
+  "description": "按当前智联筛选结果自动点击立即投递，支持投递总数、间隔和排除词。",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.zhaopin.com/*",
+        "https://*.zhaopin.com/*",
+        "https://sou.zhaopin.com/*",
+        "https://i.zhaopin.com/*",
+        "https://jobs.zhaopin.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
